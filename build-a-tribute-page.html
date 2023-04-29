@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='styles.css' />
+<style>header {
+  text-align: center;
+  font-size: 30px;
+  margin: 40px auto 
+}
+
+* {
+  font-family: Monaco, monospace;
+  box-sizing: border-box
+}
+
+figure {
+  display: flex;
+  flex-flow: column;
+  background: #ECE7F2;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10 auto;
+  height: auto;
+  width: min(70vw, 449.74182444px);
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #948C9F
+}
+
+body {
+  background: linear-gradient(#ffffff, #A8A4DA 50%);
+}
+
+div {
+  background: transparent;
+}
+
+footer {
+  background: orange;
+}
+
+#image {
+  transform: scale(.95);
+  max-width: 100%;
+  height: auto;
+  margin: 0
+}
+
+figcaption {
+  margin: 10 auto;
+  text-align: center;
+  width: 100%;
+  height: 15%;
+  font-size: 1em;
+  overflow: hidden;
+}
+
+#img-div {
+  margin-bottom: 40px
+}
+
+#tribute-info {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+#chess-board {
+  margin-bottom: 10px
+}
+
+#tribute-info p {
+  margin: 5px 30px 30px;
+  text-align: center;
+}
+
+ul {
+  margin: -5 auto 0
+}
+
+.divider {
+  background: white;
+  height: 2px;
+  margin: 40px;
+}
+
+footer {
+  background: none;
+  margin: 40px auto;
+  backdrop-filter: blur(5px);
+  text-align: center
+}</style>
+  </head>
+  <body>
+    <header id='title'>HOW TO PLAY<br /> <strong>CHESS</strong></header>
+    <main id='main'>
+      <figure id='img-div'>
+        <img id='image' src='https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80' alt='chess' />
+        <figcaption id='img-caption'>POV: You are losing a chess game as black </figcaption>
+      </figure>
+      <div id='tribute-info'>
+        <h2>The lay-out of a chess game:</h2>
+        <img id='chess-board' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Chess_board_blank.svg/242px-Chess_board_blank.svg.png?20100224192709'alt='chess board with pieces'><br>
+        <p>To win, place the opponent's king in a position where they are:
+          <ul>
+            <li>Under check</li>
+            <li>Have no legal moves</li>
+          </ul>
+        </p>
+        <h2>How each chess piece behaves:</h2>
+        <img id='king' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/45px-Chess_kdt45.svg.png' alt='king'>
+        <p><strong>The 'King'</strong><br /> Moves one square in any direction</p>
+        <img id='queen' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/45px-Chess_qdt45.svg.png' alt='queen'>
+        <p><strong>The 'Queen' (worth 9 points)</strong><br /> Moves any possible amount of squares in any direction</p>
+        <img id='bishop' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/45px-Chess_bdt45.svg.png' alt='bishop'>
+        <p><strong>The 'Bishop'</strong><br /> Moves any possible amount of squares diagonally</p>
+        <img id='knight' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/45px-Chess_ndt45.svg.png' alt='knight'>
+        <p><strong>The 'Knight'</strong><br /> Moves in an 'L'-shaped pattern (only piece able to jump over other pieces!)</p>
+        <img id='rook' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/45px-Chess_rdt45.svg.png' alt='rook'>
+        <p><strong>The 'Rook'</strong><br /> Moves any possible amount of squares vertically/horizontally</p>
+        <img id='pawn' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/45px-Chess_pdt45.svg.png' alt='pawn'>
+        <p><strong>The 'Pawn'</strong><br /> Moves one square in any direction</p>
+      </div>
+    <div class='divider'></div>
+      <footer>To learn about the more advanced rules and strategies of chess, <a id='tribute-link' href='https://en.wikipedia.org/wiki/Rules_of_chess' target='_blank'>click here</a>
+      </footer>
+    </main>
+  </body>
+</html>

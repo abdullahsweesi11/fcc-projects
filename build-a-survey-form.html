@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=viewportwidth, initial-scale=1.0' />
+  <link rel='stylesheet' href='styles.css'></link>
+  <title>2022 World Cup Survey</title>
+<style>
+
+h1, p, div {
+  font-family: Trebuchet MS, sans-serif;
+  margin: 10 auto;
+  text-align: center;
+}
+
+.description {
+  color: #FFD700;
+  border: 1px black;
+  margin: 0;
+  font: 15px Courier New;
+}
+
+.details {
+  margin: 5px auto 15px auto;
+  width: 430;
+  height: 25;
+  border: 3px inset #278A52D9;
+}
+
+select {
+  color: #7F1431;
+  margin-left: 49%;
+}
+
+body {
+  background: #7F1431
+}
+
+div {
+  width: 450px;
+  background-color: #D4AF37;
+  box-shadow: 0 0 20px 2px #ffffd3;
+}
+
+div form {
+  text-align: left;
+  padding: 10
+}
+
+label input {
+  display: inline-block;
+  width: 20;
+  height: 15;
+}
+
+h2 {
+  font-size: 15px;
+  text-align: center
+}
+
+h1 {
+  color: #ffffd3;
+}
+
+textarea {
+  color: #7F1431;
+  margin: 0% 0% 5% 25%
+}
+
+.marketing {
+  display: block;
+}
+
+input[id='submit'] {
+  display: block;
+  margin: 0 auto 5
+}</style>
+</head>
+<body>
+  <h1 id='title'>2022 World Cup Survey</h1>
+  <p class='description' id='description'><b>Just a quick survey about your World Cup experience!</b></p>
+  <div>
+    <form action='mailto:abdullahsweesi11@gmail.com' id='survey-form'>
+      <h2>Please fill in some details so we can learn about you and how to reach you...</h2>
+      <label for='name' id='name-label'>Name: <input class='details' id='name' name='name' type='text' placeholder='Enter your name' required /></label>
+      <label for='email' id='email-label'>Email: <input id='email' class='details' name='email' type='email' placeholder='Enter your Email' required /></label>
+      <label for='number' id='number-label'>Age (optional): <input id='number' class='details' type='number' min='10' max='122' placeholder='Enter your age'></label>
+      <h2>How did you watch the World Cup?</h2>
+      <label for='tv-or-online'><input type='radio' id='tv-or-online' name='watch' value='tv-or-online'> On the TV or online</input></label><br>
+      <label for='in-person'><input type='radio' id='in-person' name='watch' value='in-person'> In-person at the stadium(s)</input></label><br>
+      <label for='both'><input type='radio' id='both' name='watch' value='both'> A bit of both</input></label><br>
+      <label for='dropdown'><h2>On a scale of 1-10, how would you describe your experience?</h2>
+        <select id='dropdown'>
+          <option value='1'> 1</option>
+          <option value='2'> 2</option>
+          <option value='3'> 3</option>
+          <option value='4'> 4</option>
+          <option value='5'> 5</option>
+          <option value='6'> 6</option>
+          <option value='7'> 7</option>
+          <option value='8'> 8</option>
+          <option value='9'> 9</option>
+          <option value='10'> 10</option>
+        </select>
+      </label>
+      <h2>How should we let you know about sports-related news, promotions and marketing?</h2>
+      <label for='sms' class='marketing'><input type='checkbox' id='sms' value='sms' name='marketing'/> SMS</label>
+      <label for='email-marketing' class='marketing'><input type='checkbox' id='email-marketing' value='email-marketing' name='marketing'/> Email</label><br>
+      <label for='changes'>
+        <textarea id='changes' cols='30' rows='5' placeholder='If you can think of any, please suggest changes to elevate your World Cup experience next time!'></textarea>
+      </label>
+      <input id='submit' type='submit' />
+    </form>
+  </div>
+</body>
+</html>

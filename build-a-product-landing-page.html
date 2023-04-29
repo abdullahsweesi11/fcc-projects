@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Product Landing Page</title>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='styles.css'></a></link>
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  --bgcolor-1: #efefef;
+  --bgcolor-2: #fff;
+  --color-3: #1c9ad6;
+  --color-1: black;
+  --color-2: #;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  border: 1px solid blac
+}
+
+html, body {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;;
+  overflow-y: auto;
+  overflow-x: hidden;
+  float: top
+}
+
+#header {
+  background: var(--bgcolor-2);
+  width: 100%;
+  height: 70px;
+  display: grid;
+  grid-template-columns: max-content minmax(25px, auto) max-content;
+  border-bottom: 1px solid var(--color-3);
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+}
+
+#header-img {
+  height: 35px;
+  align-self: center;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  place-self: center / start;
+  margin-left: 25px
+}
+
+#nav-bar {
+  grid-row: 1 / span 1;
+  grid-column: 3 / span 1;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#nav-bar ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  gap: 2%;
+  margin-right: 10px
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: var(--color-1);
+}
+
+.search:hover {
+  background: var(--bgcolor-1);
+}
+
+#nav-bar ul li {
+  text-align: center;
+  padding: 4px;
+}
+
+#nav-bar ul li:hover:not(li.search) {
+  border-bottom: 3px solid var(--color-3);
+  background: var(--bgcolor-1);
+  height: 70px;
+  padding-top: 4%;
+}
+
+section:first-of-type {
+  margin-bottom: 75px;
+  position: relative;
+  padding-top: 70px;
+}
+
+#img-1 {
+  width: 100%;
+  border: none
+}
+
+section:not(#testimonials, #how-it-works, :first-of-type) {
+  margin-bottom: 75px;
+  padding-top: 75px;
+}
+
+
+#overview {
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-template-rows: max-content repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #fff;
+  height: max-content;
+}
+
+#overview .title {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  align-self: end;
+  
+}
+
+#overview p {
+  text-align: start !important;
+}
+
+#overview img {
+  width: 80%;
+  object-fit: cover;
+  border: none;
+}
+
+#indoor-camera, #outdoor-camera {
+  grid-column: 1 / span 1;
+  justify-self: center;
+  align-self: center
+}
+
+#indoor-camera {
+  grid-row: 2 / span 1;
+}
+
+#doorbell-camera {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  justify-self: center
+}
+
+#outdoor-camera {
+  grid-row: 4 / span 1;
+}
+
+#how-it-works {
+  background: var(--bgcolor-1);
+  padding-bottom: 75px;
+  padding-top: 75px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+#how-it-works img {
+  width: 15rem;
+}
+
+#how-it-works h3 {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin: auto auto 75px;;
+  font-size: 3.5rem;
+  color: #828989;
+  width: 60vw;
+  padding: 20px;
+  border-top: 3px solid var(--color-3);
+  border-bottom: 3px solid var(--color-3);
+}
+
+.feature {
+  padding: 10px;
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.features {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+p {
+  text-align: center
+}
+
+#how-it-works .feature h2, #how-it-works .feature p {
+  margin-top: 0;
+  text-align: center;
+}
+
+#see-it-in-action {
+  background: #fff;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center
+}
+
+#see-it-in-action #video {
+  width: 80%;
+  text-align: center;
+}
+
+#testimonials {
+  background: var(--bgcolor-1);
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+#reviews {
+  display: flex;
+  gap: 10px;
+  margin: auto 100px
+}
+
+#testimonials p {
+  margin-bottom: 30px;
+  font-weight: bold
+}
+
+#reviews div {
+  background: transparent;
+  border-radius: 5px;
+  padding: 15px;
+  border: 2.5px solid var(--color-3)
+}
+
+#reviews div:after {
+  content: 'Customer';
+  font-weight: bold
+}
+
+#email-subscription {
+  background: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label h3 {
+  text-align: center;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+form input[placeholder] {
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+form #email {
+  width: 35vw;
+  height: 35px;
+  margin: 15px auto;
+  border: 3px solid var(--color-3);
+  border-radius: 20px;
+}
+
+form #submit {
+  color: #fff;
+  font-size: 1rem;
+  background: var(--color-3);
+  border: none;
+  border-radius: 3px
+}
+
+footer {
+  border-top: 1px solid grey;
+  width: 90%;
+  margin: 60px auto 10px;
+  text-align: center;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  margin: 20px auto auto
+}
+
+#copyright {
+  margin: auto auto 20px
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 2rem
+  }
+
+  #image-1 {
+    width: 100%
+  }
+
+  #overview img, #how-it-works img {
+    transform: scale(0.75)
+  }
+
+  #reviews {
+    flex-wrap: wrap
+  }
+
+@media screen and (max-width: 768px) {
+  /*MAKE HEADER LINKS STACK TO THE RIGHT*/
+  #nav-bar ul{
+    flex-flow: column wrap;
+    height: 80px
+  }
+
+  #nav-bar ul li:hover:not(li.search) {
+  height: max-content;
+  border: none;
+}
+
+  #nav-bar {
+    position: relative;
+    right: 175%;
+    align-items: start;
+    align-self: start;
+  }
+
+  #header {
+    height: 100px;
+  }
+
+  #header-img {
+    position: relative;
+    float: top;
+  }
+
+  section:first-of-type {
+    padding-top: 100px;
+  }
+  /*MAKE FONT SMALLER*/
+  /*SORT OUT IMAGES*/
+
+  #overview img, #how-it-works img {
+    transform: scale(1)
+  }
+
+  form #email {
+  width: 65vw;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+  /*MAKE HEADER LINKS STACK UNDER LOGO*/
+  #header {
+  background: var(--bgcolor-2);
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--color-3);
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+}
+
+#header-img {
+  height: 35px;
+  align-self: center;
+  grid-row: 1 / span 1;
+  place-self: center start;
+  margin-top: 25px;
+}
+
+#nav-bar {
+  position: static;
+  grid-row: 2 / span 1;
+  display: flex;
+  height: max-content;
+  justify-content: center;
+  width: 100%;
+}
+
+#nav-bar ul {
+  align-content: center;
+  margin: 15px auto 5px;
+}
+
+section:first-of-type {
+    padding-top: 161px;
+  }
+
+.features {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.feature {
+  width: 100%
+}
+
+form input[placeholder] {
+  font-size: 0.75rem
+}
+}
+
+    </style>
+  </head>
+  <body>
+    <header id='header'>
+      <img id='header-img' src='https://upload.wikimedia.org/wikipedia/commons/a/ac/Ring_logo.svg' />
+      <nav id='nav-bar'>
+        <ul>
+          <li id='overview-link'><a class='nav-link' href='#overview'>Overview</a></li>
+          <li id='hiw-link'><a class='nav-link' href='#how-it-works'>How It Works</a></li>
+          <li><a class='nav-link' href='#see-it-in-action'>See It In Action</a></li>
+          <li><a class='nav-link' href='#testimonials'>Testimonials</a></li>
+          <li><a class='nav-link' href='#email-subscription'>Newsletter</a></li>
+          <li class='search'><ion-icon name="search-outline"></ion-icon></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <section>
+      <img id='img-1'src='https://gadgetguy-assets.s3.ap-southeast-2.amazonaws.com/wordpress/wp-content/uploads/2019/07/02201333/Ring-header.jpg' />
+    </section>
+    <section id='overview'>
+      <h2 class='title'>Together, we'll make neighbourhoods safer</h2>
+      <img id='indoor-camera' src='https://cdn.mos.cms.futurecdn.net/z4BeBx2JyBMpVFujwy2EtM-970-80.jpg.webp'>
+      <article id='indoor-text'>
+        <h3>Indoor Cameras</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacus felis, convallis id euismod ac, ornare vitae nisi. Sed ac aliquet nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<br></br>In ligula lectus, tempus semper rutrum vel, interdum ut est. Donec commodo sodales eros, vel malesuada est lobortis ut. Phasellus non varius elit, quis dictum mauris. Fusce quis libero in elit bibendum efficitur.</p>
+      </article>
+      <article id='doorbell-text'>
+        <h3>Doorbell Cameras</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacus felis, convallis id euismod ac, ornare vitae nisi.<br></br>Sed ac aliquet nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In ligula lectus, tempus semper rutrum vel, interdum ut est. Donec commodo sodales eros, vel malesuada est lobortis ut.<br></br>Phasellus non varius elit, quis dictum mauris. Fusce quis libero in elit bibendum efficitur.</p>
+        </article>
+      <img id='doorbell-camera' src='https://upload.wikimedia.org/wikipedia/commons/2/26/Ring_video_doorbell.jpg'>
+      <img id='outdoor-camera' src='https://cdn.theatlantic.com/thumbor/SQJNBbn5eCZRocQdc-k3XZloiuo=/554x0:4570x4016/1080x1080/media/img/mt/2019/06/ring_stickupcam/original.jpg'>
+      <article id='outdoor-text'>
+        <h3>Outdoor Cameras</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Maecenas lacus felis, convallis id euismod ac, ornare vitae nisi. Sed ac aliquet nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<br></br>In ligula lectus, tempus semper rutrum vel, interdum ut est. Donec commodo sodales eros, vel malesuada est lobortis ut. Phasellus non varius elit, quis dictum mauris. Fusce quis libero in elit bibendum efficitur.</p>
+        </article>
+    </section>
+      <section id='how-it-works'>
+        <h1 class='title'>A bundle of utility</h1>
+        <h3>So many features!</h3>
+        <div class='features'>
+          <div class='feature'>
+            <img src='https://cdn.shopify.com/s/files/1/3101/8034/files/Illustration_01.png?v=1585306590' />
+            <h2>Detect motion</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam nulla sed neque ornare ultrices. </p>
+            </div>
+          <div class='feature'>
+            <img src='https://cdn.shopify.com/s/files/1/3101/8034/files/Illustration_02.png?v=1585306591' />
+            <h2>View your home live</h2>
+            <p>In tempor elementum urna ac gravida. Fusce vel risus condimentum purus lobortis fermentum. Nunc rhoncus, lorem vitae rhoncus tristique, quam magna sagittis massa, vel luctus eros mauris in lacus.</p>
+            </div>
+          <div class='feature'>
+            <img src='https://cdn.shopify.com/s/files/1/2551/4738/files/pmp_db_illus_3_TINY.png?11238810457143597332' />
+            <h2>Two-way talk</h2>
+            <p>Sed ut fermentum lorem. Fusce congue mauris vel ultricies congue. Donec at tincidunt neque.</p>
+            </div>
+          </div>
+          </section>
+      <section id='see-it-in-action'>
+        <h1 class='title'>See it in action...</h1>
+        <video loading='lazy' id='video' autoplay muted controls>
+          <source src='https://static.ring.com/videos/21-01-19-camera-landing-page-video-eu-cut-final.mp4' type='video/mp4'/>
+          Sorry, your browser does not support this type of video
+        </video>
+      </section>
+      <section id='testimonials'>
+        <h2 class='title'>Customer Reviews</h2>
+        <p>Too good to be true? Just look at what our loyal customers have to say!</p>
+        <div id='reviews'>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat dui enim, ut porta nisi dapibus ut. Nunc quis nibh suscipit, accumsan magna in, gravida lectus.<br></div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat dui enim, ut porta nisi dapibus ut. Nunc quis nibh suscipit, accumsan magna in, gravida lectus.<br></div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat dui enim, ut porta nisi dapibus ut. Nunc quis nibh suscipit, accumsan magna in, gravida lectus.<br></div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat dui enim, ut porta nisi dapibus ut. Nunc quis nibh suscipit, accumsan magna in, gravida lectus.<br></div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat dui enim, ut porta nisi dapibus ut. Nunc quis nibh suscipit, accumsan magna in, gravida lectus.<br></div>
+        </div>
+      </section>
+      <section id='email-subscription'>
+        <form id='form' action='https://www.freecodecamp.com/email-submit' method='get'>
+          <h2 class='title'>Subscribe to our Newsletter!</h2>
+          <label for='email'><h3>Please enter your Email:</h3>
+            <input name='email' id='email' type='email' placeholder='example@email.com'>
+            </input>
+          </a></label>
+        <input type='submit' id='submit' value='Subscribe'></input>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <h3>Terms</h3>
+        <h3>Contact Us</h3>
+        <h3>Privacy</h3>
+      </div>
+      <h3 id='copyright'>Copyright Policy</h3>
+    </footer>
+  </body>
+</html>
+
